@@ -6,7 +6,7 @@ import { useGlobalLoading } from '../../providers/global-loading-provider'
 import { ReactNode } from 'react'
 
 type LoaderLayoutProps = {
-  children: ReactNode[]
+  children: ReactNode
 }
 
 export const LoaderLayout = ({ children }: LoaderLayoutProps) => {

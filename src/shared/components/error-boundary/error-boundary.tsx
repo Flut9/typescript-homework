@@ -1,7 +1,7 @@
 import React, { ErrorInfo, ReactNode } from 'react'
 
 type ErrorBoundaryProps = {
-  children: ReactNode[]
+  children: ReactNode
 }
 
 type ErrorBoundaryState = {
