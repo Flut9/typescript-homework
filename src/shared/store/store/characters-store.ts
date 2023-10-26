@@ -1,5 +1,5 @@
-import { Character } from "../../types/Character"
+import { CharacterResponse } from "../../types/Character"
 
-export type CharactersStore = Record<number, Character>
+export type CharactersStore = Record<number, CharacterResponse>
 
 export const initialCharactersStore: CharactersStore = {}

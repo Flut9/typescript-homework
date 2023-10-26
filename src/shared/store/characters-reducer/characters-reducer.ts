@@ -1,4 +1,4 @@
-import { Character } from "../../types/Character"
+import { CharacterResponse } from "../../types/Character"
 import { CharactersStore } from "../store/characters-store"
 
 type CharactersActionType = "SET_CHARACTERS"
@@ -9,7 +9,7 @@ type CharactersAction<Type extends CharactersActionType, Payload> = {
 }
 
 type SetCharactersAction = CharactersAction<"SET_CHARACTERS", {
-  characters: Character[]
+  characters: CharacterResponse[]
 }>
 
 export type ComposedCharactersAction = SetCharactersAction
@@ -19,7 +19,7 @@ export const charactersReducer = (state: CharactersStore, action: ComposedCharac
     case "SET_CHARACTERS":
       const { characters } = action.payload
 
-      return characters.reduce((acc: CharactersStore, character: Character) => {
+      return characters.reduce((acc: CharactersStore, character: CharacterResponse): CharactersStore => {
         acc[character.id] = character
 
         return acc

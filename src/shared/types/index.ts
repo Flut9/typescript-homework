@@ -1,1 +1,1 @@
-export { Character } from "./Character"
+export { CharactersResponse, CharactersInfoResponse, CharacterResponse } from "./Character"

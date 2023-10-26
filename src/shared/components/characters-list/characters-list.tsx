@@ -1,11 +1,11 @@
 import classnames from 'classnames'
-import { Character } from '../../types/Character'
+import { CharacterResponse } from '../../types/Character'
 
 import { CharacterCard } from '../character-card'
 import styles from './characters-list.module.scss'
 
 type CharactersListProps = {
-  characters: Character[],
+  characters: CharacterResponse[],
   className: string
 }
 
