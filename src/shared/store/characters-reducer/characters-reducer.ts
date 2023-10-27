@@ -14,7 +14,7 @@ type SetCharactersAction = CharactersAction<"SET_CHARACTERS", {
 
 export type ComposedCharactersAction = SetCharactersAction
 
-export const charactersReducer = (state: CharactersStore, action: ComposedCharactersAction) => {
+export const charactersReducer = (state: CharactersStore, action: ComposedCharactersAction): CharactersStore => {
   switch (action.type) {
     case "SET_CHARACTERS":
       const { characters } = action.payload

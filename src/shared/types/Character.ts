@@ -13,10 +13,10 @@ export type CharactersInfoResponse = {
 export type CharacterResponse = {
     id: number,
     name: string,
-    status: "Alive" | "Dead" | "unknown",
+    status: CharacterStatusResponse,
     species: string,
     type: string,
-    gender: "Female" | "Male" | "Genderless" | "unknown",
+    gender: CharacterGenderResponse,
     origin: {
         name: string,
         url: string
@@ -30,3 +30,7 @@ export type CharacterResponse = {
     url: string,
     created: string
 }
+
+export type CharacterStatusResponse = "Alive" | "Dead" | "unknown"
+
+export type CharacterGenderResponse = "Female" | "Male" | "Genderless" | "unknown"

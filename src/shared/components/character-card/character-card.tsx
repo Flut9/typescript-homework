@@ -1,18 +1,15 @@
 import classnames from 'classnames'
-
+import { CharacterGenderResponse, CharacterStatusResponse } from '../../types'
 import styles from './character-card.module.scss'
 
 type CharacterCardProps = {
     imgUrl: string,
     name: string,
-    status: "Dead" | "unknown" | "Alive",
+    status: CharacterStatusResponse,
     species: string,
-    gender: "Female" | "Male" | "Genderless" | "unknown",
+    gender: CharacterGenderResponse,
     disabled?: boolean,
 }
-
-const deadCharacterStatus = 'Dead'
-const unknownCharacterStatus = 'unknown'
 
 export const CharacterCard = ({
   imgUrl,
@@ -33,8 +30,8 @@ export const CharacterCard = ({
           <div className={(styles.secondaryText, styles.status)}>
             <div
               className={classnames(styles.dot, {
-                [styles.danger]: status === deadCharacterStatus,
-                [styles.unknown]: status === unknownCharacterStatus,
+                [styles.danger]: status === "Dead",
+                [styles.unknown]: status === "unknown",
               })}
             />
             <span>{status}</span>
