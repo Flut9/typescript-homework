@@ -2,6 +2,6 @@ import { makeRequest } from './make-request'
 import { paths } from './consts'
 import { CharactersResponse } from '../types'
 
-export const getCharacters = async (): Promise<CharactersResponse> => {
-  return await makeRequest<CharactersResponse>(paths.characters)
+export const getCharacters = (): Promise<CharactersResponse> => {
+  return makeRequest<CharactersResponse>(paths.characters)
 }
